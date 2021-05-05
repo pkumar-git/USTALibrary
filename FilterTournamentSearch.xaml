@@ -1,0 +1,145 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FilterTournamentSearch" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_distance" Type="InArgument(x:String)" />
+    <x:Property Name="in_level" Type="InArgument(s:String[])" />
+    <x:Property Name="in_division" Type="InArgument(s:String[])" />
+    <x:Property Name="in_eventType" Type="InArgument(s:String[])" />
+    <x:Property Name="in_courtLocaton" Type="InArgument(s:String[])" />
+    <x:Property Name="in_gender" Type="InArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>649.777777777778,1586.22222222222</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>FilterTournamentSearch_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FilterTournamentSearch" sap:VirtualizedContainerService.HintSize="475.555555555556,1421.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: USTA / Tournaments" sap:VirtualizedContainerService.HintSize="433.777777777778,1328.88888888889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.555555555556,1111.55555555556" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.777777777778,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Applying filters&quot;]" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetDistanceFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetDistanceFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_distance">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_distance" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetLevelFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetLevelFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_level">[in_level]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetDivisionFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetDivisionFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_division">[in_division]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetEventTypeFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetEventTypeFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_eventType">[in_eventType]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetGenderFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetGenderFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_gender">[in_gender]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetCourtLocationFilter workflow" sap:VirtualizedContainerService.HintSize="333.777777777778,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SetCourtLocationFilter.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_courtLocation">[in_courtLocaton]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="92c6f9a87d4d816ebf7c408afd64933b.png" Selector="&lt;html app='chrome.exe' title='USTA / Tournaments'/&gt;" Url="https://playtennis.usta.com/tournaments?*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

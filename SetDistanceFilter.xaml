@@ -1,0 +1,147 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SetDistanceFilter" this:SetDistanceFilter.in_distance="Any" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_distance" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>676,1310.22222222222</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SetDistanceFilter_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SetDistanceFilter" sap:VirtualizedContainerService.HintSize="686.222222222222,1145.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="distance" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: USTA / Tournaments" sap:VirtualizedContainerService.HintSize="644.444444444444,1052.88888888889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="610.666666666667,835.555555555556" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[in_distance.Contains(&quot;Any&quot;)]" sap:VirtualizedContainerService.HintSize="568.888888888889,223.555555555556" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Assign sap:VirtualizedContainerService.HintSize="262.222222222222,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[distance]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">Any distance</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Then>
+              <If.Else>
+                <Assign sap:VirtualizedContainerService.HintSize="262.222222222222,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[distance]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["Within " + in_distance + " miles"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Else>
+            </If>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="568.888888888889,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Setting distance filter to: &quot; + distance]" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Distance'" sap:VirtualizedContainerService.HintSize="568.888888888889,167.555555555556" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/tournaments?level-category=junior&amp;location=75024,%20TX" DesignTimeRectangle="630, 1127, 36, 36" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl idx='2' parentid='Programme-Filters' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='Programme-Filters' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAITcAACE3ATNYn3oAAAElSURBVFhH7ZUxjoQwDAD3xbS8gTfQQskbaKlpaWlpaXMaFE4hl0WJneIKj+SCDdijxPF+3D/HBLWYoBYT1GKCWkxQiwlqyRbc991t2+af9JBvXVf/9J0swWVZXNM0V0zT5H+VU5IvS7Drut+EBAWkcAphrrZt/UqaLMF5nh9JCYkkx4pQmKfKDsIwDI/EFKJgLsdx/JHjZM7z9G+kyRaEvu8fBXIlkYjbJEcOigRThZB8KyT5JqRIEFIF33ZDuus3xYKQanYkY7R9CyJBSEmO4+hX3XU7wzVCcvPFghDPNALJcBDfIZ2dKkFIycSh+fdRC0JqkN9BH2qoIgjxhSC4wVqqCUIo+TZ6SqgqCBw3PVdDDqoL1sYEtZigFhPUYoJaTFCHcz/Dfx+TuIZbAAAAAABJRU5ErkJggg==" InformativeScreenshot="5116a8c33bdcdb7a55d715036d61e888.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="85, 1023, 601, 43" FriendlyName="'Distance'" FullSelectorArgument="&lt;webctrl id='distance' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='distance' tag='H2' type='' aaname='Distance' check:text='Distance' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click desired distance from dropdown list" sap:VirtualizedContainerService.HintSize="568.888888888889,167.555555555556" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/tournaments?location=75024,%20TX&amp;distance=50" DesignTimeRectangle="633, 1226, 601, 72" ElementType="Text" FriendlyName="'Within 100 miles'" FullSelectorArgument="[String.Format(&quot;&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;&lt;webctrl aaname='{0}' parentid='Programme-Filters' innertext='{0}' /&gt;&quot;, distance)]" FuzzySelectorArgument="[String.Format(&quot;&lt;webctrl id='react-select-5-option-3' tag='DIV' type='' aaname='{0}' check:text='{0}' /&gt;&quot;, distance)]" ImageBase64="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" InformativeScreenshot="e4b64c5902e9c484956b36228fe6c880.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;" SearchSteps="Selector" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e04fcce8edbbac210c24cbbeea8b5bf3.png" Selector="&lt;html app='chrome.exe' title='USTA / Tournaments'/&gt;" Url="https://playtennis.usta.com/tournaments?*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

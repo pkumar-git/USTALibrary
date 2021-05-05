@@ -1,0 +1,135 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SetGenderFilter" this:SetGenderFilter.in_gender="[{&quot;Boys&quot;, &quot;Girls&quot;, &quot;Coed&quot;, &quot;Mixed&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_gender" Type="InArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>944,1108.88888888889</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SetGenderFilter_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SetGenderFilter" sap:VirtualizedContainerService.HintSize="528.444444444444,904" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: USTA / Tournaments" sap:VirtualizedContainerService.HintSize="486.666666666667,811.555555555556" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452.888888888889,594.222222222222" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="411.111111111111,500.888888888889" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_gender]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.555555555556,364.444444444444" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.777777777778,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Setting Gender to: &quot; + item]" />
+                    <uix:NClick ClickType="Single" DisplayName="Click Gender" sap:VirtualizedContainerService.HintSize="333.777777777778,167.555555555556" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/tournaments?level-category=junior&amp;location=75024,%20TX&amp;distance=any&amp;tournament-level[,]=00000000-0000-0000-0000-000000000003,00000000-0000-0000-0000-0000000000b3,00000000-0000-0000-0000-000000000004,00000000-0000-0000-0000-0000000000b4" DesignTimeRectangle="633, 1272, 121, 31" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='Programme-Filters' tag='LABEL' /&gt;&quot;, item)]" FuzzySelectorArgument="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='Programme-Filters' tag='LABEL' type='' check:text='unchecked' /&gt;&quot;, in_gender)]" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH0AAAAjCAYAAAC5BAWiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAITcAACE3ATNYn3oAAATISURBVHhe7ZrBa9tIFMb3f/JJB0OgYOjBJ/tiQaFmDzGBGgJrCmt6MQvBgWB8MD0UFxafTGFRTgoEH8qqbHAPQYGACosDAR0KAoMgB4Hh25E0kkbSSLZJQrzW/OARmIw0tr+ZN++9mV9Amf39z06Z4PkQoheQlOgvjRD9+RGiF5DCiG6dt1EqlXJMQqXRQvejAt106FP7iRCdaxLkMw3Wij68ZxRP9MMpjKUNO2UWFl8n6DakUPz6UMc+rvniif5OgUXbuKxMKMeB8E1M72n7HiFE5/FTQZuu9tZfJm3cH4ToXBaYvvFFLxEXv28I0bkQF3/oi179bNC2/UGIzmOpouP2JVF8/2r/QjkhepKVjfmw7vd9O8Vig7TNvtMw+dCC/DqK/A9qMjonU2h3Nu2V4HaM6sYTy8H8lL77vYrYG8nn9bKOIxmVsj92qVyB/NsAyg3/mwrRA1YOLCLe+OjA6yc1BtDWuQRbx4T2z7ODown0lPYmpm/9/0un8/zU0J6hS9/VuWBe9EBijzDT4JkE+WM67Sye6Ous0sTocgF73Qp/0DGo0WdqHUyuTDjsM46b94/RehX0GUB/oP+j2BcdOm4H6pI2cgj7lfuYMwoan6lHqvWg3DKTwTGhncmQvHfXMb6Jyy5E55qEyvEY85/04RQWVLrCpGOyBSTEjMGsRulYgclOjKwVHMOG+t7vU/3EBpU6Rp47lzC4pk0xHCJ8G+PvaXcl3DtLwsW7q2RwnXa8zlXfX0XlNtTMicGwJOJSgeL7N7NXk/iBWxG4n6LpfZYqxre0zYN4Gq89S/RshOhcHOhBMJdwqd4KOnF/bLJyt8jh9SEV90SL77FhQMev/plfmv5zqUkRxQSlWh/afXpyZiFEz+JBQ88To4TuJet6o8JNvD0f51vfH/8N2Q5om08kXtx9u0Rj8dy/82OCZhCxu/aqTjKGEaYXOhZW9iQQomdiQXlHf8zYig7camk7t3o9oOKQgI42BYSBWnUMg93zQy/QxSxzyzegDjuoBwEjY1KDBHj/psUXoucwP6M/YEz0aPX1v23uUu3Lrv+u1EonhAFdfM83PlW9Z9amdBRnacK4UjE9aUc5O4lLRoWP3jcWPSrFxkV/4j3dIwroQoFXxKN4wiUDuA1hTwt/n8UKOkL0LO6CqDm9d0fRO3G7Ofl1SHhql1N9S7jycAzX5dMuW/Odv6UI0XlYGvph4WUEPamTu4rofr8+Tzcw/pWu4mSeHiMK6DoXZuhNml8yjnZXNozzHlrE22RMoyjyPyTj0jaX4omeeXPGJjn6HMqQ2Q/LTeJaM35Sc4ZeXkXOq4mzFbkeZmuO5sOArlZH3f2bU6lzbka0jwT5DwUGG63TCSHT79E+j0/z4om+obmRr7ru1syjau8cmAqdZ4m9OIl5GQnLN/5dPyE6Y8HJmHq7aXzvY10rGCVO2aTXMlofJlu+i6nQ5e3/LPYC2p9dtBoVWmsPxh6RsflTpjCi/19wvvZ80ZM5+xMiRN8pmMOVZ7yxI0TfJcIbO897C1eIvkOEKVbydswTI0TfFVYkn/dSwA0DuEcgRH9BnEDblQXtdLt7eY9BiP5iRKd1oZXbUNYUcJ6ClOi7YnuPNUMvyOu926t517OeEuA/3QfSLqjXGOIAAAAASUVORK5CYII=" InformativeScreenshot="1f3d7a4f759d5af417fd2bf55e26c79f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;" SearchSteps="Selector" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="633, 1189, 601, 43" FriendlyName="'Gender'" FullSelectorArgument="&lt;webctrl id='event-division-gender' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='event-division-gender' tag='H2' type='' aaname='Gender' check:text='Gender' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Gender" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='H2' type='' /&gt;" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7084afd98d312212ce7e247a7c465ea6.png" Selector="&lt;html app='chrome.exe' title='USTA / Tournaments'/&gt;" Url="https://playtennis.usta.com/tournaments\?level-category=.*&amp;location=.*&amp;distance=.*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

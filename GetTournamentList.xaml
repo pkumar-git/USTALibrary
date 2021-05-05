@@ -1,0 +1,172 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTournamentList" this:GetTournamentList.in_category="Junior" this:GetTournamentList.in_locationKeyword="75024" this:GetTournamentList.in_distance="Any" this:GetTournamentList.in_level="[{&quot;Level 2&quot;, &quot;Level 3 Open&quot;, &quot;Level 3 Closed&quot;, &quot;Level 4 Open&quot;, &quot;Level 4 Closed&quot;, &quot;Level 5 Open&quot;, &quot;Level 5 Closed&quot;}]" this:GetTournamentList.in_gender="[{&quot;Boys&quot;}]" this:GetTournamentList.in_courtLocation="[{}]" this:GetTournamentList.in_division="[{&quot;18&quot;}]" this:GetTournamentList.in_eventType="[{}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_tournamentList" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_category" Type="InArgument(x:String)" />
+    <x:Property Name="in_locationKeyword" Type="InArgument(x:String)" />
+    <x:Property Name="in_distance" Type="InArgument(x:String)" />
+    <x:Property Name="in_level" Type="InArgument(s:String[])" />
+    <x:Property Name="in_gender" Type="InArgument(s:String[])" />
+    <x:Property Name="in_courtLocation" Type="InArgument(s:String[])" />
+    <x:Property Name="in_division" Type="InArgument(s:String[])" />
+    <x:Property Name="in_eventType" Type="InArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>992.888888888889,2160.44444444444</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetTournamentList_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetTournamentList" sap:VirtualizedContainerService.HintSize="492.888888888889,1995.55555555556" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.111111111111,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Invoking DoTournamentSearch&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DoTournamentSearch workflow" sap:VirtualizedContainerService.HintSize="451.111111111111,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="DoTournamentSearch.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_category">[in_category]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_locationKeyword">[in_locationKeyword]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_distance">[in_distance]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_level">[in_level]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_gender">[in_gender]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_courtLocation">[in_courtLocation]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_division">[in_division]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_eventType">[in_eventType]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.111111111111,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Returned from DoTournamentSearch.  Loading all tournaments into tournaments page.&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LoadAllTournaments workflow" sap:VirtualizedContainerService.HintSize="451.111111111111,113.777777777778" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LoadAllTournaments.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.111111111111,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Loaded all tournaments into tournaments page&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="451.111111111111,842.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="417.333333333333,625.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.555555555556,531.111111111111" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.777777777778,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Starting tournament list extraction&quot;]" />
+              <uix:NExtractData ContinueOnError="True" DataTable="[out_tournamentList]" DisplayName="Extract Table - Tournament List" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Tournament Name'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Tournament Page'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Registration Status'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.777777777778,167.555555555556" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/tournaments?level-category=junior&amp;location=75024,%20TX" DesignTimeRectangle="1310, 1306, 1888, 106" ElementType="Button" FriendlyName="'Show more results'" FullSelectorArgument="&lt;webctrl parentid='Search-Results' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Search-Results' tag='BUTTON' type='button' aaname='Show more results' check:text='Show more results' /&gt;" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1261, 637, 1964, 14791" FriendlyName="'SECTION Search-Results'" FullSelectorArgument="&lt;webctrl id='Search-Results' tag='SECTION' /&gt;" InformativeScreenshot="0ae215a298817f9f61c7dca590a07ed3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA / Tournaments' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.777777777778,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Finished extracting tournament list&quot;]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="3117f1715f677a6fc383138b2c31340b.png" Selector="&lt;html app='chrome.exe' title='USTA / Tournaments'/&gt;" Url="https://playtennis.usta.com/tournaments*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_tournamentList]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="451.111111111111,308.888888888889" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.555555555556,187.111111111111" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.777777777778,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[row(&quot;Tournament Name&quot;).ToString + &quot;, &quot; + row(&quot;Tournament Page&quot;).ToString + &quot;, &quot; + row(&quot;Registration Status&quot;).ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
