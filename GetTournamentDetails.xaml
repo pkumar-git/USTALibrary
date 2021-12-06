@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetTournamentDetails" this:GetTournamentDetails.in_URL="https://playtennis.usta.com/Competitions/tucsonracquetclub0/Tournaments/Overview/8e74b70f-7b0b-454d-b1e0-4f0a27d9305c" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTournamentDetails" this:GetTournamentDetails.in_URL="https://playtennis.usta.com/Competitions/USTASouthwest/Tournaments/Overview/3a2b4d43-610e-4829-8f6b-986ef99b1533" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_URL" Type="InArgument(x:String)" />
     <x:Property Name="out_tournamentVenue" Type="OutArgument(x:String)" />
@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>905.333333333333,3237.77777777778</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>905.333333333333,4044</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTournamentDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -86,9 +86,10 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTournamentDetails" sap:VirtualizedContainerService.HintSize="642.666666666667,3172.88888888889" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTournamentDetails" sap:VirtualizedContainerService.HintSize="642.666666666667,3979.11111111111" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="registrationOpenString" />
     </Sequence.Variables>
@@ -97,24 +98,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: USTA /" sap:VirtualizedContainerService.HintSize="600.888888888889,2090.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: USTA /" sap:VirtualizedContainerService.HintSize="600.888888888889,2896.88888888889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="567.111111111111,1869.77777777778" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence sap:VirtualizedContainerService.HintSize="567.111111111111,2679.55555555556" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="525.333333333333,1777.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="525.333333333333,2585.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Getting tournament name&quot;]" />
               <uix:NGetText DisplayName="Get Text Tounament Name" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_1">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/metroplex-tennis-association-inc/Tournaments/players/0575FC81-AA2A-4B6D-98FF-1ABAE1C8D4E6" DesignTimeRectangle="588, 637, 1991, 85" FriendlyName="'Level 3'" FullSelectorArgument="&lt;webctrl tag='H1' aaname='Level * - *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' /&gt;" ImageBase64="" InformativeScreenshot="06e049f62b45af792f061a8a8bc5a507.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="Selector" />
@@ -123,6 +125,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_tournamentName]</OutArgument>
                 </uix:NGetText.Text>
               </uix:NGetText>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Getting tournament ID&quot;]" />
               <uix:NGetText DisplayName="Get Text 'Tournament ID:'" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_6">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/asociacion-de-tenis-de-puerto-rico/Tournaments/Overview/c03fc592-15d5-41c1-8271-b6db76acbc79" DesignTimeRectangle="588, 826, 1549, 60" ElementType="Text" FriendlyName="'AVE TENIENTE'" FullSelectorArgument="&lt;webctrl idx='1' isleaf='1' parentid='tournaments' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='tournaments' tag='P' /&gt;" ImageBase64="" InformativeScreenshot="a2221d14418a0ba8a0264a4dc89a1262.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="FuzzySelector">
@@ -137,6 +140,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_tournamentVenue]</OutArgument>
                 </uix:NGetText.Text>
               </uix:NGetText>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Getting tournament dates&quot;]" />
               <uix:NGetText DisplayName="Get Text Tournamnt Dates" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_2">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;&lt;webctrl aaname='Back to tournaments' parentid='tournaments' tag='A' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='tournaments' tag='P' /&gt;" SearchSteps="Selector" />
@@ -145,6 +149,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_tournamentDates]</OutArgument>
                 </uix:NGetText.Text>
               </uix:NGetText>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Getting tournament ID&quot;]" />
               <uix:NGetText DisplayName="Get Text Tournament ID" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_3">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/metroplex-tennis-association-inc/Tournaments/players/0575FC81-AA2A-4B6D-98FF-1ABAE1C8D4E6" DesignTimeRectangle="588, 814, 1991, 48" ElementType="Text" FriendlyName="'Tournament ID: 21-14255'" FullSelectorArgument="&lt;webctrl parentid='tournaments' tag='P' innertext='Tournament ID: *' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tournaments' tag='P' innertext='Tournament ID: *' type='' /&gt;" ImageBase64="" InformativeScreenshot="338620ef06313438b23efe79ba80293f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="FuzzySelector">
@@ -167,6 +172,7 @@
                   <InArgument x:TypeArguments="x:String">[out_tournamentID.Split(":"c)(1)]</InArgument>
                 </Assign.Value>
               </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Getting registration open status&quot;]" />
               <uix:NGetText DisplayName="Get Text 'Registrations open'" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_4">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/metroplex-tennis-association-inc/Tournaments/players/0575FC81-AA2A-4B6D-98FF-1ABAE1C8D4E6" DesignTimeRectangle="588, 980, 324, 52" ElementType="Text" FriendlyName="'Registrations open'" FullSelectorArgument="&lt;webctrl parentid='tournaments' tag='P' aaname='Registrations *' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tournaments' tag='P' aaname='Registrations *' type='' /&gt;" ImageBase64="" InformativeScreenshot="a18e880e89a813a02c1c47c156a71294.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="FuzzySelector">
@@ -189,14 +195,15 @@
                   <InArgument x:TypeArguments="x:Boolean">[registrationOpenString.Contains("open")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[out_registrationOpen]" DisplayName="If Registrations are open" sap:VirtualizedContainerService.HintSize="483.555555555556,444.444444444444" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[out_registrationOpen]" DisplayName="If Registrations are open" sap:VirtualizedContainerService.HintSize="483.555555555556,578.222222222222" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="375.555555555556,261.777777777778" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.555555555556,395.555555555556" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.777777777778,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Trace" Message="[&quot;Getting registration deadline&quot;]" />
                     <uix:NGetText DisplayName="Get Text Registration deadline" sap:VirtualizedContainerService.HintSize="333.777777777778,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_5">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/metroplex-tennis-association-inc/Tournaments/players/0575FC81-AA2A-4B6D-98FF-1ABAE1C8D4E6" DesignTimeRectangle="1047, 983, 369, 42" FriendlyName="'April 8,'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;time' tag='TIME' /&gt;" FuzzySelectorArgument="&lt;webctrl  tag='TIME' type='' /&gt;" ImageBase64="" InformativeScreenshot="925307325fc6601263fd4699bd5fe30b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="FuzzySelector">
