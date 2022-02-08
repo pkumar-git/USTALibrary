@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetTournamentDetails" this:GetTournamentDetails.in_URL="https://playtennis.usta.com/Competitions/wisehaventenniscenter/Tournaments/Overview/adf1bff3-ab42-484a-bc4f-44f6baae8a3a" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTournamentDetails" this:GetTournamentDetails.in_URL="https://playtennis.usta.com/Competitions/kalamazoocollege/Tournaments/Overview/f02743d7-de5c-4dd2-8ce0-09f76142902e" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_URL" Type="InArgument(x:String)" />
     <x:Property Name="out_tournamentVenue" Type="OutArgument(x:String)" />
@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>905.333333333333,4066.22222222222</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>905.333333333333,4717.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTournamentDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -52,7 +52,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -86,9 +86,10 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTournamentDetails" sap:VirtualizedContainerService.HintSize="642.666666666667,4001.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTournamentDetails" sap:VirtualizedContainerService.HintSize="642.666666666667,4652.44444444444" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="registrationOpenString" />
     </Sequence.Variables>
@@ -97,19 +98,23 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: USTA /" sap:VirtualizedContainerService.HintSize="600.888888888889,2908.88888888889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: USTA /" sap:VirtualizedContainerService.HintSize="600.888888888889,3560" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="567.111111111111,2691.55555555556" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence sap:VirtualizedContainerService.HintSize="567.111111111111,3342.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="525.333333333333,2597.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="525.333333333333,3248.44444444444" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="variable1" />
+                <Variable x:TypeArguments="x:String" Name="level" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -229,6 +234,34 @@
                   </Sequence>
                 </If.Else>
               </If>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.555555555556,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Getting level&quot;]" />
+              <uix:NClick ClickType="Single" DisplayName="Click 'Overview'" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/bay-area-racquet-club/Tournaments/overview/A502DC4F-2C46-474F-8E45-334A0452EA10" DesignTimeRectangle="588, 1321, 150, 140" ElementType="Text" FriendlyName="'Overview'" FullSelectorArgument="&lt;webctrl aaname='Overview' parentid='tournaments' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Overview' parentid='tournaments' tag='A' type='' check:text='Overview' /&gt;" ImageBase64="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" InformativeScreenshot="8f436267b3769c9ce4c1ab8b10a39dc2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text Level Information" sap:VirtualizedContainerService.HintSize="483.555555555556,167.555555555556" sap2010:WorkflowViewState.IdRef="NGetText_7">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://playtennis.usta.com/Competitions/richlandcountryclub/Tournaments/Overview/752ef57a-c099-4ca3-a102-8b3ba11975d5" DesignTimeRectangle="633, 1116, 1695, 32" FriendlyName="'Level 4 Open'" FullSelectorArgument="&lt;webctrl tag='H6' aaname='Level*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H6' type='' aaname='Level*' /&gt;" ImageBase64="" InformativeScreenshot="30dfa88459be094ee1c79c7f12119fab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='USTA /' /&gt;" SearchSteps="Selector, FuzzySelector">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="588, 943, 90, 50" ElementType="Text" FriendlyName="'All'" FullSelectorArgument="&lt;webctrl aaname='All' parentid='tournaments' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='All' parentid='tournaments' tag='SPAN' type='' check:text='All' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAA2CAYAAABOdS5ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAITcAACE3ATNYn3oAAAIJSURBVHhe7Zm/agJBEId9DF/D17AUbCy1TGdraUo7CQgRtLK7wiZWHqQJ2mgXwcLKKgGP2JwEYeKf5W5vc3s3K8hY/D4Y0N31wO/OmXW2QEAEiBcC4oWAeCEgXgiIFwLihYB4ISBeCIgXAuKFgHghIF4IiBcC4oWAeCEgXgiIFwLihXgs8eEPBftT/Kr3Lny9U6X6QgUVlbdvNWHAXXdnHkj8lvpNJaQ9o0CNsoH4G1lNqBQJGVB/q8a5QPwtHGjajWWcozRcqzkmEH8D+xk9aTIuUfNoGqp5DhDvTuCPIhF6NPydWsEA4l3RiqoZTZ82alUuEO9Ioqiecnu9F712KrIQ74JRVM95fe1TWRPDLrIQ70Awo4YmodhdUkg78trxGLvIQjyfzXgQCShUe9RZXcfDuUdFTQ6ryEI8k+OaOvVYQKKQHj/puWaZswHxPPKe6sVQL7Lxr8EKxHNg5PFtsshe838GEM/AkJq+czFuTnVEXlbnDOLzSaYRfpTHGZt6iM8hXFJLL5wuUZ/Q4qiuYwLx2dj6MtxozQ/qSgYQn4XRl+H8OTJaCtZDEojPwOzLsNoBZhPN0r+BeDsfr/EXvuzNmW0YMz2l3jCIt2AWVZeWr3lQkpaiID4d86l1OuRIORr893mIBxwgXgiIFwLihYB4ISBeCIgXAuKFgHghIF4IiBcC4kUg+gNr0FZLDR+rdwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[level]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <Assign DisplayName="Assign - add level to tournament name" sap:VirtualizedContainerService.HintSize="483.555555555556,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_tournamentName]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[level + "-" + out_tournamentName]</InArgument>
+                </Assign.Value>
+              </Assign>
             </Sequence>
           </Sequence>
         </ActivityAction>
